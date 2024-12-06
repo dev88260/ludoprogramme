@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results</title>
+</head>
+<body>
+    <h1>Game Over</h1>
+    <h2>Final Scores:</h2>
+
+    <ul>
+        {% for score in scores %}
+            <li>Player {{ loop.index }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Winner: Player {{ winner }}!</h2>
+
+    <a href="/play">Play Again</a>
+</body>
+</html>
